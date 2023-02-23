@@ -14,9 +14,7 @@ const Beranda = () => {
 
   const artikelAPI = async () => {
     try {
-      const response = await axios.get(
-        `${import.meta.env.VITE_REACT_APP_API}/artikel`
-      );
+      const response = await axios.get(`${import.meta.env.VITE_REACT_APP_API}/artikel`);
       setData(response.data.data);
     } catch (error) {
       console.log(error.message);
@@ -35,10 +33,9 @@ const Beranda = () => {
           <h2>Kenapa Re4Cash?</h2>
           <div className="bottom-line" />
           <p>
-            Sebagai marketplace yang peduli terhadap masalah pencemaran sampah,
-            Re4Cash memiliki misi untuk mengembangkan bisnis yang berkelanjutan
-            dengan memperhatikan keasrian alam dengan tujuan peningkatan ekonomi
-            serta pemeliharaan lingkungan
+            Sebagai marketplace yang peduli terhadap masalah pencemaran sampah, Re4Cash memiliki
+            misi untuk mengembangkan bisnis yang berkelanjutan dengan memperhatikan keasrian alam
+            dengan tujuan peningkatan ekonomi serta pemeliharaan lingkungan
           </p>
         </div>
         <div className="card-why-re4cash">
@@ -109,10 +106,9 @@ const Beranda = () => {
         </div>
         <div className="left-edukasi-landing">
           <p>
-            Indonesia menempati peringkat kedua di dunia sebagai penghasil
-            sampah plastik terbesar ke laut. Hal ini diikuti oleh rendahnya
-            kesadaran masyarakat serta kurangnya edukasi terkait pengelolaan
-            sampah agar tidak mencemari lingkungan.
+            Indonesia menempati peringkat kedua di dunia sebagai penghasil sampah plastik terbesar
+            ke laut. Hal ini diikuti oleh rendahnya kesadaran masyarakat serta kurangnya edukasi
+            terkait pengelolaan sampah agar tidak mencemari lingkungan.
           </p>
           <Link to="/edukasi" className="iconify-hover">
             <iconify-icon icon="gridicons:arrow-right" />
@@ -124,10 +120,7 @@ const Beranda = () => {
         <div className="right-menyiapkan-sampah">
           <div className="right-menyiapkan-title">
             <h2>Cara Menyiapkan Sampah</h2>
-            <p>
-              Siapa bilang memilah sampah itu ribet? Sini ya biar aku kasih tau
-              ya
-            </p>
+            <p>Siapa bilang memilah sampah itu ribet? Sini ya biar aku kasih tau ya</p>
           </div>
           <div className="step-by-step-menyiapkan">
             <MenyiapkanSampah
@@ -174,8 +167,7 @@ const Beranda = () => {
             .map((datas) => {
               const maxLength = 100;
               const truncatedArtikel =
-                datas.artikel.slice(0, maxLength) +
-                (datas.artikel.length > maxLength ? "..." : "");
+                datas.artikel.slice(0, maxLength) + (datas.artikel.length > maxLength ? "..." : "");
               const maxLengthTitle = 30;
               const truncatedTitle =
                 datas.judul_artikel.slice(0, maxLengthTitle) +
